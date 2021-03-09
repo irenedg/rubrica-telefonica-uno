@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Router } from '@angular/router';
+import { RubricaService } from '../rubrica.service';
 
 @Component({
   selector: 'app-search-page',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor() { }
+  searchCriteria = "";
+
+  constructor(private router: Router, public rubrica: RubricaService) { }
 
   ngOnInit(): void {
   }
 
+  tornaMain(){
+    console.log("siamo in tornaMain()");
+    this.router.navigateByUrl("/main");
+  }
+
+  cerca(){
+  }
 }

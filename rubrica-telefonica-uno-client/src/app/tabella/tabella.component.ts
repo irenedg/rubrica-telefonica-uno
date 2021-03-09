@@ -8,17 +8,18 @@ import { RubricaService } from '../rubrica.service';
   styleUrls: ['./tabella.component.css']
 })
 export class TabellaComponent implements OnInit {
-  
-  constructor(public rubrica: RubricaService) { 
+
+  constructor(public rubrica: RubricaService) {
     this.rub = this.rubrica.contatti;
   }
 
-  rub : Contatto[] = [];
+  rub: Contatto[] = [];
 
   ngOnInit(): void {
   }
 
-  rimuovi(i){
-    this.rubrica.contatti.splice(i,1);
+  rimuovi(i) {
+    this.rubrica.contatti.splice(i, 1);
   }
+
 }
