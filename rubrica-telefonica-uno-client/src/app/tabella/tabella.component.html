@@ -1,1 +1,13 @@
-<p>tabella works!</p>
+<table style="width: 80%">
+    <tr>
+      <th>Nome</th>
+      <th>Cognome</th>
+      <th>Telefono</th>
+    </tr>
+    <tr *ngFor="let c of rub; index as i">
+      <td>{{c.nome}}</td>
+      <td>{{c.cognome}}</td>
+      <td>{{c.telefono}}</td>
+      <button (click)="rimuovi(i)">X</button>
+    </tr>
+  </table>
