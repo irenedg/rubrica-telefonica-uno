@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RubricaService } from '../rubrica.service';
 
 @Component({
   selector: 'app-count-page',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, public rubrica: RubricaService) { 
+    this.numeroContatti = rubrica.contatti.length;
+  }
+
+  numeroContatti= 0;
 
   ngOnInit(): void {
+  }
+
+  tornaMainPage(){
+    console.log("siamo in tornaMainPage()");
+    this.router.navigateByUrl("/main");
   }
 
 }

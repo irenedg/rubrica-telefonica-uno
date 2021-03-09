@@ -9,6 +9,9 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { CountPageComponent } from './count-page/count-page.component';
 import { TabellaComponent } from './tabella/tabella.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { TabellaComponent } from './tabella/tabella.component';
     MainPageComponent,
     SearchPageComponent,
     CountPageComponent,
-    TabellaComponent
+    TabellaComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
