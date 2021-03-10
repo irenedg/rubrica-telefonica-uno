@@ -1,4 +1,4 @@
-package it.iad.rubricatelefonicaunoserver.model;
+package it.iad2.rubricatelefonicaunoserver.model;
 
 import java.io.Serializable;
 import javax.persistence.Column;

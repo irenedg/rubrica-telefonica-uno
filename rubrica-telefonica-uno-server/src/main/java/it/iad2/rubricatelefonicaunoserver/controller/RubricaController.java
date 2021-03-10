@@ -1,17 +1,21 @@
-package it.iad.rubricatelefonicaunoserver.controller;
+package it.iad2.rubricatelefonicaunoserver.controller;
 
-import it.iad.rubricatelefonicaunoserver.dto.ContattoDto;
-import it.iad.rubricatelefonicaunoserver.dto.CounterDto;
-import it.iad.rubricatelefonicaunoserver.dto.FiltroDto;
-import it.iad.rubricatelefonicaunoserver.dto.IdDto;
-import it.iad.rubricatelefonicaunoserver.dto.ListaContattiDto;
+import it.iad2.rubricatelefonicaunoserver.dto.ContattoDto;
+import it.iad2.rubricatelefonicaunoserver.dto.CounterDto;
+import it.iad2.rubricatelefonicaunoserver.dto.EsitoLoginDto;
+import it.iad2.rubricatelefonicaunoserver.dto.FiltroDto;
+import it.iad2.rubricatelefonicaunoserver.dto.IdDto;
+import it.iad2.rubricatelefonicaunoserver.dto.ListaContattiDto;
+import it.iad2.rubricatelefonicaunoserver.dto.UtenteDto;
+import it.iad2.rubricatelefonicaunoserver.service.RubricaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import it.iad.rubricatelefonicaunoserver.service.RubricaService;
-import org.springframework.web.bind.annotation.RequestBody;
+
+
 
 @CrossOrigin("*")
 @RestController
@@ -19,7 +23,14 @@ public class RubricaController {
 
     @Autowired
     RubricaService rubricaService;
-
+    
+    
+    @RequestMapping("/check-login")
+    @ResponseBody
+    public EsitoLoginDto checkLogin(@RequestBody UtenteDto dto) {
+        return new EsitoLoginDto(rubricaService.checkLogin(dto));
+    }
+    
     @RequestMapping("/conta")
     @ResponseBody
     public CounterDto conta() {

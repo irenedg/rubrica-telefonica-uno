@@ -1,41 +1,51 @@
-package it.iad.rubricatelefonicaunoserver.service.impl;
+package it.iad2.rubricatelefonicaunoserver.service.impl;
 
-import it.iad.rubricatelefonicaunoserver.model.Contatto;
-import it.iad.rubricatelefonicaunoserver.repository.ContattoRepository;
-import it.iad.rubricatelefonicaunoserver.service.RubricaService;
-import java.util.List;
+import it.iad2.rubricatelefonicaunoserver.dto.ListaContattiDto;
+import it.iad2.rubricatelefonicaunoserver.dto.UtenteDto;
+import it.iad2.rubricatelefonicaunoserver.model.Contatto;
+import it.iad2.rubricatelefonicaunoserver.repository.ContattoRepository;
+import it.iad2.rubricatelefonicaunoserver.service.RubricaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RubricaServiceImpl implements RubricaService {
+public class RubricaServiceImpl implements RubricaService{
 
-//    @Autowired
-//    ContattoRepository contattoRepository;
+    @Autowired
+    ContattoRepository contattoRepository;
 
+    @Override
+    public boolean checkLogin(UtenteDto utente) {
+        if(utente.getUser().equals("user") && utente.getPassword().equals("psw")){
+            return true;
+        }
+        return false;
+    }
+    
     @Override
     public int conta() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Contatto> search(String filtro) {
+    public ListaContattiDto search(String filtro) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Contatto> cancellaRubrica(Long id) {
+    public ListaContattiDto cancellaRubrica(Long id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Contatto> aggiungiRubrica(Contatto contatto) {
+    public ListaContattiDto aggiungiRubrica(Contatto contatto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Contatto> trovaTutti() {
+    public ListaContattiDto trovaTutti() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    
 }

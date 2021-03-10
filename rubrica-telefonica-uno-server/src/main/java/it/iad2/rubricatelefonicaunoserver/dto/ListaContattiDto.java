@@ -1,6 +1,6 @@
-package it.iad.rubricatelefonicaunoserver.dto;
+package it.iad2.rubricatelefonicaunoserver.dto;
 
-import it.iad.rubricatelefonicaunoserver.model.Contatto;
+import it.iad2.rubricatelefonicaunoserver.model.Contatto;
 import java.util.List;
 
 

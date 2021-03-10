@@ -1,4 +1,4 @@
-package it.iad.rubricatelefonicaunoserver.dto;
+package it.iad2.rubricatelefonicaunoserver.dto;
 
 public class CounterDto {
 

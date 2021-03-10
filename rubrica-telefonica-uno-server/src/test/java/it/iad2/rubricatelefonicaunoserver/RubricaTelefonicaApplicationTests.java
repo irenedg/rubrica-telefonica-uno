@@ -1,10 +1,10 @@
-package it.iad.rubricatelefonicaunoserver;
+package it.iad2.rubricatelefonicaunoserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RubricatelefonicaunoserverApplicationTests {
+class RubricaTelefonicaApplicationTests {
 
 	@Test
 	void contextLoads() {
