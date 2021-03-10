@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { EsitoLoginDto } from '../esito-login-dto';
 import { Utente } from '../utente';
 
 @Component({
@@ -9,16 +12,23 @@ import { Utente } from '../utente';
 })
 export class LoginPageComponent implements OnInit {
   utente = new Utente();
+  esitoLogin : boolean;
 
-  utenteDB = "user";
-  passwordDB = "psw"; 
-  constructor(private router: Router) { }
+  
+  constructor(private http: HttpClient ,private router: Router) { }
 
   ngOnInit(): void {
   }
 
   checkLogin(){
-    if (this.utenteDB ==  this.utente.user && this.passwordDB ==  this.utente.password){
+    let dto: Utente = new Utente();
+    dto.user = this.utente.user;
+    dto.password = this.utente.password;
+    let oss: Observable<EsitoLoginDto> = this.http.post<EsitoLoginDto>(
+      "http://localhost:8080/check-login", dto
+    );
+    oss.subscribe(v => this.esitoLogin = v.esitoLogin);
+    if (this.esitoLogin){
       this.router.navigateByUrl("/main");
     } else {
       this.router.navigateByUrl("/error");
