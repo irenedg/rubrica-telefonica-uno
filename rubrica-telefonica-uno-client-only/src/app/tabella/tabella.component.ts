@@ -12,8 +12,8 @@ export class TabellaComponent implements OnInit {
   constructor(public rubrica: RubricaService) {
     this.rub = this.rubrica.contatti;
   }
-//searchCriteria: string;
- 
+  //searchCriteria: string;
+
   rub: Contatto[] = [];
 
   ngOnInit(): void {

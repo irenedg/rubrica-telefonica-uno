@@ -1,6 +1,5 @@
 export class Contatto {
-    id : number;
-    nome = "";
+    nome= "";
     cognome= "";
     telefono= "";
 }

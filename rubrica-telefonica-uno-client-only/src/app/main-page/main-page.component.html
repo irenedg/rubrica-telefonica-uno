@@ -1,0 +1,11 @@
+Nome
+<input type="text" [(ngModel)]="contatto.nome">
+Cognome
+<input type="text" [(ngModel)]="contatto.cognome">
+Telefono
+<input type="text" [(ngModel)]="contatto.telefono">
+<br>
+<button (click)="aggiungi()">Aggiungi</button>
+<button (click)="conta()">Conta</button>
+<button (click)="ricerca()">Ricerca</button>
+<app-tabella></app-tabella>

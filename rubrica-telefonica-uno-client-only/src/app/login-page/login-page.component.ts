@@ -11,12 +11,11 @@ export class LoginPageComponent implements OnInit {
   utente = new Utente();
 
   utenteDB = "user";
-  passwordDB = "psw"; 
+  passwordDB = "psw";
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
   checkLogin(){
     if (this.utenteDB ==  this.utente.user && this.passwordDB ==  this.utente.password){
       this.router.navigateByUrl("/main");
