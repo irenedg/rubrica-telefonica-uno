@@ -16,18 +16,18 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  aggiungi(){
+
+  aggiungi() {
     this.rubrica.contatti.push(this.contatto);
     this.contatto = new Contatto();
   }
 
-  conta(){
+  conta() {
     console.log("siamo in conta()");
     this.router.navigateByUrl("/count");
   }
 
-  ricerca(){
+  ricerca() {
     console.log("siamo in ricerca()");
     this.router.navigateByUrl("/search");
   }

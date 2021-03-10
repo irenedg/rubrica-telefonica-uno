@@ -21,6 +21,5 @@ export class SearchPageComponent implements OnInit {
     this.router.navigateByUrl("/main");
   }
 
-  cerca(){
-  }
+  
 }
