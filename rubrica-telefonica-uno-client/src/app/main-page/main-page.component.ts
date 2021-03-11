@@ -33,6 +33,11 @@ export class MainPageComponent implements OnInit {
     this.router.navigateByUrl("/search");
   }
 
+  logOut() {
+    console.log("siamo in logOut()");
+    this.router.navigateByUrl("/login");
+  }
+
   /*caricaContatti() {
     let oss: Observable<ListaContattiDto> = this.http.get<ListaContattiDto>("http://localhost:8080/main-page");
     oss.subscribe(v => this.rubrica.contatti = v.listContatto);

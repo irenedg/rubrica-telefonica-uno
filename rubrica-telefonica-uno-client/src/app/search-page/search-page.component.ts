@@ -20,6 +20,4 @@ export class SearchPageComponent implements OnInit {
     console.log("siamo in tornaMain()");
     this.router.navigateByUrl("/main");
   }
-
-  
 }

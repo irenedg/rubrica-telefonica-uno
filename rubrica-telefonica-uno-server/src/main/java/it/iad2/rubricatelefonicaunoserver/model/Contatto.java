@@ -50,6 +50,12 @@ public class Contatto implements Serializable{
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
-    
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

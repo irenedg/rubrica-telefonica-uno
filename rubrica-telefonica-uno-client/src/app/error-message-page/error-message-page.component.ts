@@ -12,6 +12,7 @@ export class ErrorMessagePageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   tornaLoginPage(){
     console.log("siamo in tornaLoginPage()");
     this.router.navigateByUrl("/login");
