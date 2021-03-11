@@ -12,26 +12,23 @@ import { Utente } from '../utente';
 })
 export class LoginPageComponent implements OnInit {
   utente = new Utente();
-  esitoLogin : boolean;
+  esitoLogin: boolean;
 
-  
-  constructor(private http: HttpClient ,private router: Router) { }
+
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  checkLogin(){
+  checkLogin() {
     let dto: Utente = new Utente();
     dto.user = this.utente.user;
     dto.password = this.utente.password;
     let oss: Observable<EsitoLoginDto> = this.http.post<EsitoLoginDto>(
       "http://localhost:8080/check-login", dto
     );
-    oss.subscribe(v => this.esitoLogin = v.esitoLogin);
-    if (this.esitoLogin){
-      this.router.navigateByUrl("/main");
-    } else {
-      this.router.navigateByUrl("/error");
-    }
+    oss.subscribe(v => (v.esitoLogin) ?
+      this.router.navigateByUrl("/main") :
+      this.router.navigateByUrl("/error"));
   }
 }

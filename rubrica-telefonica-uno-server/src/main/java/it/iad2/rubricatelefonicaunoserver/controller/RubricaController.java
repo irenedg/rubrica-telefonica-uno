@@ -34,33 +34,31 @@ public class RubricaController {
     @RequestMapping("/conta")
     @ResponseBody
     public CounterDto conta() {
-        throw new UnsupportedOperationException("conta");
+        return new CounterDto(rubricaService.conta());
     }
 
     @RequestMapping("/search")
     @ResponseBody
     public ListaContattiDto search(@RequestBody FiltroDto dto) {
-        throw new UnsupportedOperationException("search");
+        return rubricaService.search(dto.getFiltro());
     }
 
     @RequestMapping("/cancella-rubrica")
     @ResponseBody
     public ListaContattiDto cancellaRubrica(@RequestBody IdDto dto) {
-        throw new UnsupportedOperationException("cancellaRubrica");
+        return rubricaService.cancellaRubrica(dto.getId());
     }
 
     @RequestMapping("/aggiungi-rubrica")
     @ResponseBody
     public ListaContattiDto aggiungiRubrica(@RequestBody ContattoDto dto) {
-
-        throw new UnsupportedOperationException("aggiungiRubrica");
+        return rubricaService.aggiungiRubrica(dto.getContatto());
     }
 
     @RequestMapping("/main-page")
     @ResponseBody
     public ListaContattiDto trovaTutti() {
-
-        throw new UnsupportedOperationException("trovaTutti");
+        return rubricaService.trovaTutti();
     }
 
 }

@@ -24,27 +24,28 @@ public class RubricaServiceImpl implements RubricaService{
     
     @Override
     public int conta() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (int)contattoRepository.count();
     }
 
     @Override
     public ListaContattiDto search(String filtro) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new ListaContattiDto(contattoRepository.findByNomeContainsOrCognomeContainsOrTelefonoContains(filtro, filtro, filtro));
     }
 
     @Override
     public ListaContattiDto cancellaRubrica(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        contattoRepository.deleteById(id);
+        return trovaTutti();    }
 
     @Override
     public ListaContattiDto aggiungiRubrica(Contatto contatto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        contattoRepository.save(contatto);
+        return trovaTutti();
     }
 
     @Override
     public ListaContattiDto trovaTutti() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new ListaContattiDto(contattoRepository.findAll());
     }
 
     
