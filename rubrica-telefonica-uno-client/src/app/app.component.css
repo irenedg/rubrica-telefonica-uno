@@ -1,0 +1,212 @@
+.scrodiv {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    border: 1px solid black;
+    border-style: solid;
+    width: 900px;
+    height: 250px;
+    background-color: #ffffff;
+}
+
+table {
+    width: 100%;
+}
+
+input {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    width: 200px;
+    height: 14px;
+}
+
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+textarea {
+    resize: none
+}
+
+select {
+    font-size: 12px;
+    width: 208px;
+    background-color: rgb(238, 238, 238);
+    height: 25px;
+}
+
+.bgdesk {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d3e7ff;
+    border-style: solid;
+    border-width: 1px;
+    width: 1000px;
+    height: 500px;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 900px;
+    height: 400px;
+}
+
+.centerblue {
+    background-color: rgb(232, 239, 255);
+    width: 500px;
+    height: 350px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.texta {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    width: 500px;
+}
+
+.thfont {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+.td0 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    text-align: center;
+    width: 10px;
+}
+
+.td1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    text-align: center;
+    width: 100px;
+}
+
+.td2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    text-align: center;
+    width: 150px;
+}
+
+.td3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    text-align: center;
+    width: 100px;
+}
+
+button {
+    border-radius: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    width: 90px;
+    height: 30px;
+}
+
+.trline {
+    border-bottom: 1px solid #000;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #bdd2ee;
+    color: rgb(44, 44, 44);
+    height: 30px;
+}
+
+/*.buttoncancel {
+    width: 30px;
+    height: 30px;
+    background-image: url('img\cancel_30.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.buttonconferma {
+    width: 30px;
+    height: 30px;
+    background-image: url('img\ok_30.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.buttondeselect {
+    width: 30px;
+    height: 30px;
+    background-image: url('img\Deselect.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.buttonselect {
+    width: 30px;
+    height: 30px;
+    background-image: url('img\Select.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.buttonmodifica {
+    width: 30px;
+    height: 30px;
+    background-image: url('img\modify_30.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.buttondismodifica {
+    width: 30px;
+    height: 30px;
+    background-image: url('img\modify_30.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgb(177, 177, 177);
+}
+
+.buttonerase {
+    width: 30px;
+    height: 30px;
+    background-image: url('img\cestino.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}*/
+
+[data-tooltip]:before {
+    /* needed - do not touch */
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+    /* customizable */
+    transition: all 0.15s ease;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;
+}
+
+[data-tooltip]:hover:before {
+    /* needed - do not touch */
+    opacity: 1;
+    /* customizable */
+    background: rgb(102, 102, 102);
+    margin-top: -50px;
+    margin-left: 20px;
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+    pointer-events: none;
+}

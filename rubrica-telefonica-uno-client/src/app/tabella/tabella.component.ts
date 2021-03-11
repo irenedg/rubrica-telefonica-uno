@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Contatto } from '../contatto';
-import { ContattoDto } from '../contatto-dto';
 import { FiltroDto } from '../filtro-dto';
 import { IdDto } from '../id-Dto';
 import { ListaContattiDto } from '../lista-contatti-dto';
@@ -18,7 +16,7 @@ export class TabellaComponent implements OnInit {
   constructor(public rubrica: RubricaService, private http: HttpClient) {
   }
 
-  @Input() filtro : "";
+  @Input() filtro: "";
 
   ngOnInit(): void {
     this.caricaContatti();
@@ -52,16 +50,4 @@ export class TabellaComponent implements OnInit {
     );
     oss.subscribe(c => this.rubrica.contatti = c.listContatto);
   }
-
-  /*aggiungi(contatto) {
-    let dto: ContattoDto = new ContattoDto();
-    dto.contatto = contatto;
-    let oss: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
-      "http://localhost:8080/aggiungi-rubrica",
-      dto
-    );
-    oss.subscribe(v => this.rubrica.contatti = v.listContatto);
-    contatto = new Contatto();
-  }*/
-
 }
