@@ -46,7 +46,7 @@ public class RubricaController {
     @RequestMapping("/cancella-rubrica")
     @ResponseBody
     public ListaContattiDto cancellaRubrica(@RequestBody IdDto dto) {
-        return rubricaService.cancellaRubrica(dto.getId());
+        return rubricaService.cancellaRubrica(dto.getId(), dto.getFiltro());
     }
 
     @RequestMapping("/aggiungi-rubrica")

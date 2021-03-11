@@ -12,7 +12,7 @@ public interface RubricaService {
    
    ListaContattiDto search(String filtro);
    
-   ListaContattiDto cancellaRubrica(Long id);
+   ListaContattiDto cancellaRubrica(Long id, String filtro);
    
    ListaContattiDto aggiungiRubrica(Contatto contatto);
    

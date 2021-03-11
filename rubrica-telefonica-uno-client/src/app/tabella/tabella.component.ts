@@ -18,6 +18,8 @@ export class TabellaComponent implements OnInit {
   constructor(public rubrica: RubricaService, private http: HttpClient) {
   }
 
+  @Input() filtro : "";
+
   ngOnInit(): void {
     this.caricaContatti();
   }
@@ -30,8 +32,10 @@ export class TabellaComponent implements OnInit {
   rimuovi(i) {
     console.log(i);
     console.log(this.rubrica.contatti);
+    console.log("il filtro che arriva dal padre è: " + this.filtro);
     let dto: IdDto = new IdDto();
     dto.id = this.rubrica.contatti[i].id;
+    dto.filtro = this.filtro;
     let oss: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
       "http://localhost:8080/cancella-rubrica",
       dto

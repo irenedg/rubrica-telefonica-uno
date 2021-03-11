@@ -9,22 +9,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RubricaServiceImpl implements RubricaService{
+public class RubricaServiceImpl implements RubricaService {
 
     @Autowired
     ContattoRepository contattoRepository;
 
     @Override
     public boolean checkLogin(UtenteDto utente) {
-        if(utente.getUser().equals("user") && utente.getPassword().equals("psw")){
+        if (utente.getUser().equals("user") && utente.getPassword().equals("psw")) {
             return true;
         }
         return false;
     }
-    
+
     @Override
     public int conta() {
-        return (int)contattoRepository.count();
+        return (int) contattoRepository.count();
     }
 
     @Override
@@ -33,9 +33,10 @@ public class RubricaServiceImpl implements RubricaService{
     }
 
     @Override
-    public ListaContattiDto cancellaRubrica(Long id) {
+    public ListaContattiDto cancellaRubrica(Long id, String filtro) {
         contattoRepository.deleteById(id);
-        return trovaTutti();    }
+        return search(filtro);
+    }
 
     @Override
     public ListaContattiDto aggiungiRubrica(Contatto contatto) {
@@ -48,5 +49,4 @@ public class RubricaServiceImpl implements RubricaService{
         return new ListaContattiDto(contattoRepository.findAll());
     }
 
-    
 }
