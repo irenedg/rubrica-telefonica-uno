@@ -16,13 +16,15 @@ import { RubricaService } from '../rubrica.service';
 export class TabellaComponent implements OnInit {
 
   constructor(public rubrica: RubricaService, private http: HttpClient) {
-    this.rub = this.rubrica.contatti;
   }
-  //searchCriteria: string;
-
-  rub: Contatto[] = [];
 
   ngOnInit(): void {
+    this.caricaContatti();
+  }
+
+  caricaContatti() {
+    let oss: Observable<ListaContattiDto> = this.http.get<ListaContattiDto>("http://localhost:8080/main-page");
+    oss.subscribe(v => this.rubrica.contatti = v.listContatto);
   }
 
   rimuovi(i) {
@@ -47,7 +49,7 @@ export class TabellaComponent implements OnInit {
     oss.subscribe(c => this.rubrica.contatti = c.listContatto);
   }
 
-  aggiungi(contatto) {
+  /*aggiungi(contatto) {
     let dto: ContattoDto = new ContattoDto();
     dto.contatto = contatto;
     let oss: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
@@ -56,6 +58,6 @@ export class TabellaComponent implements OnInit {
     );
     oss.subscribe(v => this.rubrica.contatti = v.listContatto);
     contatto = new Contatto();
-  }
+  }*/
 
 }

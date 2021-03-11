@@ -38,6 +38,17 @@ export class MainPageComponent implements OnInit {
     this.router.navigateByUrl("/login");
   }
 
+  aggiungi() {
+    let dto: ContattoDto = new ContattoDto();
+    dto.contatto = this.contatto;
+    let oss: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
+      "http://localhost:8080/aggiungi-rubrica",
+      dto
+    );
+    oss.subscribe(v => this.rubrica.contatti = v.listContatto);
+    this.contatto = new Contatto();
+  }
+
   /*caricaContatti() {
     let oss: Observable<ListaContattiDto> = this.http.get<ListaContattiDto>("http://localhost:8080/main-page");
     oss.subscribe(v => this.rubrica.contatti = v.listContatto);
