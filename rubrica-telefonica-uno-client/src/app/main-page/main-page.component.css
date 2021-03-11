@@ -1,4 +1,5 @@
 .bgdesk {
+    
     margin-left: auto;
     margin-right: auto;
     background-color: #d3e7ff;
@@ -21,7 +22,7 @@
     padding: 15px;
 }
 .padTop {
-    padding-top: 25px;
+    padding-top: 15px;
 }
 
 .center {
@@ -101,19 +102,28 @@ button {
     float: right;
     width: 50%;
 }
-#container2 {
+#container4 {
     width: 100%;
     text-align: center;
 }
 
-
-#left2 {
-    display: inline-block;
-    margin: 0 auto;
-    width: 50%;
+#left4 {
+    float: left;
+    width: 25%;
 }
 
-#right2 {
+#leftcenter4 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 25%;
+}
+#rightcenter4 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 25%;
+}
+
+#right4 {
     float: right;
-    width: 50%;
+    width: 25%;
 }
