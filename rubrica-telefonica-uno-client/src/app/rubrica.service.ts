@@ -13,9 +13,9 @@ export class RubricaService {
 
   constructor(private http: HttpClient) {
     this.caricaContatti();
-   }
+  }
 
-   caricaContatti() {
+  caricaContatti() {
     let oss: Observable<ListaContattiDto> = this.http.get<ListaContattiDto>("http://localhost:8080/main-page");
     oss.subscribe(v => this.contatti = v.listContatto);
   }

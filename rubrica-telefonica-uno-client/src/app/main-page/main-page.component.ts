@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Contatto } from '../contatto';
 import { ContattoDto } from '../contatto-dto';
+import { IdDto } from '../id-Dto';
 import { ListaContattiDto } from '../lista-contatti-dto';
 import { RubricaService } from '../rubrica.service';
 
@@ -20,6 +21,10 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges():void{
+    this.rubrica.caricaContatti();
   }
 
   conta() {
@@ -48,5 +53,17 @@ export class MainPageComponent implements OnInit {
       oss.subscribe(v => this.rubrica.contatti = v.listContatto);
       this.contatto = new Contatto();
     }
+  }
+
+  rimuoviM(i){
+    console.log("sono in rimuovi di Main")
+    let dto: IdDto = new IdDto();
+    dto.id = this.rubrica.contatti[i].id;
+    dto.filtro = "";
+    let oss: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
+      "http://localhost:8080/cancella-rubrica",
+      dto
+    );
+    oss.subscribe(v => this.rubrica.contatti = v.listContatto);
   }
 }

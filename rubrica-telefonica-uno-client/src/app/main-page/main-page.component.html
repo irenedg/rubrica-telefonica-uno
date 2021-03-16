@@ -34,6 +34,6 @@
             <button (click)="logOut()">Logout</button>
         </div>
         <div class="center">
-            <app-tabella></app-tabella>
+            <app-tabella (delete)="rimuoviM($event)"></app-tabella>
         </div>
     </div>
