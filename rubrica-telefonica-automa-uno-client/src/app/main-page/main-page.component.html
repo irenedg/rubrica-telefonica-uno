@@ -1,0 +1,39 @@
+<div class="bgdesk">
+    <h2 class="centerS">HOME PAGE</h2>
+    <h3 class="centerS">Rubrica</h3>
+    <hr>
+    <div id="container3">
+        <div id="left3" class="centerS">
+            <label>Nome</label>
+            <br>
+            <input type="text" [(ngModel)]="contatto.nome">
+        </div>
+        <div id="center3" class="centerS">
+            <label>Cognome</label>
+            <br>
+            <input type="text" [(ngModel)]="contatto.cognome">
+        </div>
+        <div id="right3" class="centerS">
+            <label>Telefono</label>
+            <br>
+            <input type="text" [(ngModel)]="contatto.telefono">
+        </div>
+    </div>
+    <br>
+    <div id="container4">
+        <div id="left4" class="padTop">
+            <button (click)="aggiungi()">Aggiungi</button>
+        </div>
+        <div id="leftcenter4" class="padTop">
+            <button (click)="conta()">Conta</button>
+        </div>
+        <div id="rightcenter4" class="padTop">
+            <button (click)="ricerca()">Ricerca</button>
+        </div>
+        <div id="right4" class="padTop">
+            <button (click)="logOut()">Logout</button>
+        </div>
+        <div class="center">
+            <app-tabella></app-tabella>
+        </div>
+    </div>

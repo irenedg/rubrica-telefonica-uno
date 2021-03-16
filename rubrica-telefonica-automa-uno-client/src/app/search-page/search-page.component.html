@@ -1,0 +1,17 @@
+<div class="bgdesk">
+    <h2 class="centerS">SEARCH PAGE</h2>
+    <h3 class="centerS">Rubrica</h3>
+    <hr>
+    <div class="center">
+        <div id="left2">
+            <input type="text" [(ngModel)]="searchCriteria">
+            <button (click)="figlio.cerca(searchCriteria)">Cerca</button>
+        </div>
+        <div id="right2">
+            <button (click)="tornaMain()">Main Page</button>
+        </div>
+        <div class="padTop">
+            <app-tabella #figlio [filtro]=searchCriteria></app-tabella>
+        </div>
+    </div>
+</div>

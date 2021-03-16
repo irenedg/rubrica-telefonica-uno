@@ -1,0 +1,128 @@
+.bgdesk {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d3e7ff;
+    border-style: solid;
+    
+}
+.padXL {
+    padding: 20px;
+}
+
+.padS {
+    padding: 5px;
+}
+
+.padM {
+    padding: 10px;
+}
+
+.padL {
+    padding: 15px;
+}
+.padTop {
+    padding-top: 25px;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 900px;
+    height: 400px;
+}
+.centerS {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.centerblue {
+    background-color: rgb(232, 239, 255);
+    width: 500px;
+    height: 250px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    width: 200px;
+    height: 14px;
+}
+
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+button {
+    border-radius: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    width: 90px;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    text-align: center;
+}
+
+#left3 {
+    float: left;
+    width: 33%;
+}
+
+#center3 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 34%;
+}
+
+#right3 {
+    float: right;
+    width: 33%;
+}
+
+#left2 {
+    float: left;
+    width: 50%;
+}
+
+#right2 {
+    float: right;
+    width: 50%;
+}
+#container4 {
+    width: 100%;
+    text-align: center;
+}
+
+#left4 {
+    float: left;
+    width: 25%;
+}
+
+#leftcenter4 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 25%;
+}
+#rightcenter4 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 25%;
+}
+
+#right4 {
+    float: right;
+    width: 25%;
+}

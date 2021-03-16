@@ -1,0 +1,20 @@
+<div class="padTop">
+  <div class="scrodiv">
+    <table clss="padTop">
+      <tr>
+        
+        <th class="td1, thfont">NOME</th>
+        <th class="td2, thfont">COGNOME</th>
+        <th class="td3, thfont">TELEFONO</th>
+        <th class="td1, thfont"> </th>
+      </tr>
+      <tr *ngFor="let c of rubrica.contatti; index as i">
+        <td>{{c.nome}}</td>
+        <td>{{c.cognome}}</td>
+        <td>{{c.telefono}}</td>
+        <button (click)="rimuovi(i)">X</button>
+      </tr>
+    </table>
+  </div>
+</div>
+<br>

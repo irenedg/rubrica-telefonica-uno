@@ -1,0 +1,17 @@
+<div class="centerblue">
+    <h2>Login Page</h2>
+    <hr>
+    <div class="padS">
+        <label>Username</label>
+    </div>
+    <input type="text" [(ngModel)]="utente.user" />
+    <div class="padS">
+        <label>Password</label>
+    </div>
+
+    <input type="password" [(ngModel)]="utente.password" />
+
+    <div class="padXL">
+        <button (click)="checkLogin()">Login</button>
+    </div>
+</div>
