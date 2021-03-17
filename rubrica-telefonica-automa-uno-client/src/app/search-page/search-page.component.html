@@ -6,11 +6,13 @@
         <h3 class="centerS">Rubrica</h3>
         <hr>
         <div>
-            <input class="margineLaterale" type="text" [(ngModel)]="searchCriteria">
-            <button class="margineLaterale" (click)="figlio.cerca(searchCriteria)">Cerca</button>
+            <input class="margineLaterale" type="text" [(ngModel)]="searchCriterion">
+            <button class="margineLaterale" (click)="cerca()">Cerca</button>
+            <button class="margineLaterale" (click)="rimuovi()">Rimuovi</button>
         </div>
+        {{notificaSelezione}}
         <div class="margineTop">
-            <app-tabella #figlio [filtro]=searchCriteria></app-tabella>
+            <app-tabella (select)="seleziona($event)"></app-tabella>
         </div>
     </div>
 </div>

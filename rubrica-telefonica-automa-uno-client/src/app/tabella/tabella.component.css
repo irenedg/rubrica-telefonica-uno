@@ -5,7 +5,6 @@ table {
     margin-left: 10px;
     margin-right: 10px;
 }
-
 .margineTop {
     margin-top: 5px;
 }
@@ -18,7 +17,6 @@ table {
     margin-right: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 .scrodiv {
     overflow-y: scroll;
     overflow-x: scroll;
@@ -28,41 +26,35 @@ table {
     height: 250px;
     background-color: #ffffff;
 }
-
 .thfont {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 12px;
     text-align: center;
 }
-
 .td0 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 11px;
     text-align: center;
     width: 10px;
 }
-
 .td1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 11px;
     text-align: center;
     width: 100px;
 }
-
 .td2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 11px;
     text-align: center;
     width: 150px;
 }
-
 .td3 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 11px;
     text-align: center;
     width: 100px;
 }
-
 button {
     border-radius: 8px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -70,11 +62,9 @@ button {
     width: 90px;
     height: 30px;
 }
-
 .padTop {
     padding-top: 15px;
 }
-
 .padTopCenter {
     text-align: center;
     margin-left: auto;
@@ -82,15 +72,12 @@ button {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-top: 15px;
 }
-
 .trline {
     border-bottom: 1px solid #000;
 }
-
 tr:nth-child(even) {
     background-color: #f2f2f2
 }
-
 th {
     background-color: #bdd2ee;
     color: rgb(44, 44, 44);
