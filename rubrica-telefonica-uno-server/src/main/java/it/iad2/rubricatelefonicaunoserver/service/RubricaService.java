@@ -14,6 +14,8 @@ public interface RubricaService {
    
    ListaContattiDto cancellaRubrica(Long id, String filtro);
    
+   ListaContattiDto modificaRubrica(Contatto contatto, String filtro);
+   
    ListaContattiDto aggiungiRubrica(Contatto contatto);
    
    ListaContattiDto trovaTutti();

@@ -1,6 +1,7 @@
 package it.iad2.rubricatelefonicaunoserver.controller;
 
 import it.iad2.rubricatelefonicaunoserver.dto.ContattoDto;
+import it.iad2.rubricatelefonicaunoserver.dto.ContattoRicercaDto;
 import it.iad2.rubricatelefonicaunoserver.dto.CounterDto;
 import it.iad2.rubricatelefonicaunoserver.dto.EsitoLoginDto;
 import it.iad2.rubricatelefonicaunoserver.dto.FiltroDto;
@@ -47,6 +48,12 @@ public class RubricaController {
     @ResponseBody
     public ListaContattiDto cancellaRubrica(@RequestBody IdDto dto) {
         return rubricaService.cancellaRubrica(dto.getId(), dto.getFiltro());
+    }
+
+    @RequestMapping("/modifica")
+    @ResponseBody
+    public ListaContattiDto modificaRubrica(@RequestBody ContattoRicercaDto dto) {
+        return rubricaService.modificaRubrica(dto.getContatto(),dto.getFiltro());
     }
 
     @RequestMapping("/aggiungi-rubrica")

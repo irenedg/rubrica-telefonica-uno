@@ -39,6 +39,12 @@ public class RubricaServiceImpl implements RubricaService {
     }
 
     @Override
+    public ListaContattiDto modificaRubrica(Contatto contatto, String filtro) {
+        contattoRepository.save(contatto);
+        return search(filtro);
+    }
+
+    @Override
     public ListaContattiDto aggiungiRubrica(Contatto contatto) {
         contattoRepository.save(contatto);
         return trovaTutti();
