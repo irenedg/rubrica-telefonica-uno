@@ -1,6 +1,6 @@
 export class Contatto {
     id : number;
-    nome = "";
-    cognome= "";
-    telefono= "";
+    nome : string;
+    cognome : string;
+    telefono : string;
 }

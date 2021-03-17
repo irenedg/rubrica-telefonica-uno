@@ -19,11 +19,14 @@ import { RubricaService } from '../rubrica.service';
 export class MainPageComponent implements OnInit {
 
   contatto: Contatto = new Contatto();
-  searchCriterion: string = '';
   automa: Automa;
 
   //visibilità bottoni (dichiarare proprietà gui)
-
+  buttonNuovaVisible: boolean = false;
+  formDivVisible: boolean = false;
+  campiNonEditabili: boolean = false;
+  confAnnVisible: boolean = false;
+  searchVisible: boolean = false;
 
   constructor(private router: Router, public rubrica: RubricaService, private http: HttpClient) {
   }
@@ -32,11 +35,36 @@ export class MainPageComponent implements OnInit {
     this.automa = new Automa(this);
   }
 
-  goToAggiungi(){}
-  goToModifica(){}
-  goToRicerca(){}
-  goToRimuovi(){}
-  goToVisualizza(){}
+  goToRicerca() { 
+    this.buttonNuovaVisible = true;
+    this.formDivVisible = false;
+    // this.campiNonEditabili = true;
+    // this.confAnnVisible = true;
+  }
+  goToAggiungi() {
+    this.buttonNuovaVisible = false;
+    this.formDivVisible = true;
+    this.campiNonEditabili = false;
+    this.confAnnVisible = true;
+   }
+  goToModifica() { 
+    this.buttonNuovaVisible = false;
+    this.formDivVisible = true;
+    this.campiNonEditabili = false;
+    this.confAnnVisible = true;
+  }
+  goToRimuovi() { 
+    this.buttonNuovaVisible = false;
+    this.formDivVisible = true;
+    this.campiNonEditabili = true;
+    this.confAnnVisible = true;
+  }
+  goToVisualizza() {
+    this.buttonNuovaVisible = true;
+    this.formDivVisible = true;
+    this.campiNonEditabili = true;
+    this.confAnnVisible = false;
+   }
 
 
   conta() {
@@ -54,34 +82,21 @@ export class MainPageComponent implements OnInit {
     this.router.navigateByUrl("/login");
   }
 
-  /*aggiungi() {
-    if (this.contatto.nome != "" && this.contatto.cognome != "" && this.contatto.telefono != "") {
-      let dto: ContattoDto = new ContattoDto();
-      dto.contatto = this.contatto;
-      let oss: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
-        "http://localhost:8080/aggiungi-rubrica",
-        dto
-      );
-      oss.subscribe(v => this.rubrica.contatti = v.listContatto);
-      this.contatto = new Contatto();
-    }
-  }*/
-
   nuova() {
     if (this.contatto.nome == null && this.contatto.cognome == null && this.contatto.telefono == null) {
-    this.automa.next(new AddEvent());
+      this.automa.next(new AddEvent());
     }
   }
 
   modifica() {
     if (this.contatto.nome != null && this.contatto.cognome != null && this.contatto.telefono != null) {
-    this.automa.next(new ModificaEvent());
+      this.automa.next(new ModificaEvent());
     }
   }
 
   rimuovi() {
     if (this.contatto.nome != null && this.contatto.cognome != null && this.contatto.telefono != null) {
-    this.automa.next(new RimuoviEvent());
+      this.automa.next(new RimuoviEvent());
     }
   }
 
@@ -92,9 +107,6 @@ export class MainPageComponent implements OnInit {
       // chiamata REST nuova
       if (this.contatto.nome != null && this.contatto.cognome != null && this.contatto.telefono != null) {
         let dtoA: ContattoDto = new ContattoDto();
-        console.log('nome     : ', this.contatto.nome);
-        console.log('cognome  : ', this.contatto.cognome);
-        console.log('telefono  : ', this.contatto.telefono);
         dtoA.contatto = this.contatto;
         let ossA: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
           'http://localhost:8080/aggiungi-rubrica',
@@ -106,9 +118,8 @@ export class MainPageComponent implements OnInit {
       console.log('sono in conferma modifica');
       // chiamata REST modifica
       if (this.contatto.nome != null && this.contatto.cognome != null && this.contatto.telefono != null) {
-        let dtoM: IdDto = new IdDto();
-        dtoM.id = this.contatto.id;
-        dtoM.filtro = this.searchCriterion;
+        let dtoM: ContattoDto = new ContattoDto();
+        dtoM.contatto = this.contatto;
         let ossM: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
           'http://localhost:8080/modifica',
           dtoM
@@ -121,7 +132,7 @@ export class MainPageComponent implements OnInit {
       if (this.contatto.nome != null && this.contatto.cognome != null && this.contatto.telefono != null) {
         let dtoR: IdDto = new IdDto();
         dtoR.id = this.contatto.id;
-        dtoR.filtro = this.searchCriterion;
+        dtoR.filtro = "";
         let ossR: Observable<ListaContattiDto> = this.http.post<ListaContattiDto>(
           'http://localhost:8080/cancella-rubrica',
           dtoR
@@ -145,12 +156,4 @@ export class MainPageComponent implements OnInit {
     this.contatto.cognome = cont.cognome;
     this.contatto.telefono = cont.telefono;
   }
-
-  aggiorna() {
-    let oss: Observable<ListaContattiDto> = this.http.get<ListaContattiDto>(
-      'http://localhost:8080/visualizza-lista'
-    );
-    oss.subscribe((r) => (this.rubrica.contatti = r.listContatto));
-  }
-
 }
