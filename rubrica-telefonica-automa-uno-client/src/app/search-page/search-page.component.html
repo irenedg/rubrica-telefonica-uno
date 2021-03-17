@@ -1,17 +1,18 @@
 <div class="bgdesk dimensioneMax">
 
-    <button class="margineTop margineLaterale" (click)="tornaMain()">Main Page</button>
-    <div class="center">
+    
+    <div>
         <h2 class="centerS">SEARCH PAGE</h2>
         <h3 class="centerS">Rubrica</h3>
+        <button class="margineTop margineLaterale" (click)="tornaMain()">Main Page</button>
         <hr>
-        <div>
+        <div class="center">
             <input class="margineLaterale" type="text" [(ngModel)]="searchCriterion">
             <button class="margineLaterale" (click)="cerca()">Cerca</button>
             <button class="margineLaterale" (click)="rimuovi()">Rimuovi</button>
         </div>
         {{notificaSelezione}}
-        <div class="margineTop">
+        <div class="margineTop center">
             <app-tabella (select)="seleziona($event)"></app-tabella>
         </div>
     </div>
