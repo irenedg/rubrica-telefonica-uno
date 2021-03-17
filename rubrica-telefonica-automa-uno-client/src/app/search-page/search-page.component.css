@@ -1,3 +1,7 @@
+.dimensioneMax{
+    width: 660px;
+    height: 540px;
+}
 .bgdesk {
     margin-left: auto;
     margin-right: auto;
@@ -5,16 +9,13 @@
     border-style: solid;
     
 }
-.padXL {
-    padding: 20px;
+.margineLaterale {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.padS {
-    padding: 5px;
-}
-
-.padM {
-    padding: 10px;
+.margineTop {
+    margin-top: 5px;
 }
 
 .padL {
@@ -29,8 +30,8 @@
     margin-left: auto;
     margin-right: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 900px;
-    height: 400px;
+    /*width: 900px;
+    height: 400px;*/
 }
 .centerS {
     text-align: center;

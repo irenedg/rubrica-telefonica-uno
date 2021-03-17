@@ -1,17 +1,24 @@
+.dimensioneMax{
+    width: 660px;
+    height: 540px;
+}
 .bgdesk {
-    
     margin-left: auto;
     margin-right: auto;
     background-color: #d3e7ff;
     border-style: solid;
-    
-}
-.padXL {
-    padding: 20px;
 }
 
-.padS {
-    padding: 5px;
+.margineLaterale {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.margineTop {
+    margin-top: 5px;
+}
+.margineDown {
+    margin-bottom: 5px;
 }
 
 .padM {
@@ -21,6 +28,7 @@
 .padL {
     padding: 15px;
 }
+
 .padTop {
     padding-top: 15px;
 }
@@ -33,12 +41,12 @@
     width: 900px;
     height: 400px;
 }
+
 .centerS {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
 
 .centerblue {
@@ -72,6 +80,10 @@ button {
     height: 30px;
 }
 
+#left1 {
+    float: left;
+}
+
 #container {
     width: 100%;
     text-align: center;
@@ -92,16 +104,20 @@ button {
     float: right;
     width: 33%;
 }
-
+#container2 {
+    width: 100%;
+    text-align: center;
+}
 #left2 {
     float: left;
-    width: 50%;
+    width: 20%;
 }
 
 #right2 {
     float: right;
-    width: 50%;
+    width: 80%;
 }
+
 #container4 {
     width: 100%;
     text-align: center;
@@ -117,6 +133,7 @@ button {
     margin: 0 auto;
     width: 25%;
 }
+
 #rightcenter4 {
     display: inline-block;
     margin: 0 auto;

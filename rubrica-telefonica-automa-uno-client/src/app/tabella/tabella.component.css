@@ -1,5 +1,22 @@
 table {
-    width: 100%;
+    width: 500px;
+}
+.margineLaterale {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.margineTop {
+    margin-top: 5px;
+}
+.margineDown {
+    margin-bottom: 5px;
+}
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .scrodiv {
@@ -7,7 +24,7 @@ table {
     overflow-x: scroll;
     border: 1px solid black;
     border-style: solid;
-    width: 900px;
+    width: 520px;
     height: 250px;
     background-color: #ffffff;
 }
@@ -64,4 +81,18 @@ button {
     margin-right: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-top: 15px;
+}
+
+.trline {
+    border-bottom: 1px solid #000;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #bdd2ee;
+    color: rgb(44, 44, 44);
+    height: 20px;
 }

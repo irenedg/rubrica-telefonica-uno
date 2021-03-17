@@ -1,4 +1,11 @@
-<div class="bgdesk">
+<div class="bgdesk dimensioneMax">
+    <div class="margineTop">
+
+        <button class="margineLaterale" (click)="conta()">Conta</button>
+        <button class="margineLaterale" (click)="ricerca()">Ricerca</button>
+        <button class="margineLaterale" (click)="logOut()">Logout</button>
+
+    </div>
     <h2 class="centerS">HOME PAGE</h2>
     <h3 class="centerS">Rubrica</h3>
     <hr>
@@ -20,20 +27,21 @@
         </div>
     </div>
     <br>
-    <div id="container4">
-        <div id="left4" class="padTop">
-            <button (click)="aggiungi()">Aggiungi</button>
+    
+        <div id="container2">
+
+            <div id="right2">
+                <button class="margineLaterale margineTop margineDown" (click)="aggiungi()">Modifica</button>
+                <button class="margineLaterale margineTop margineDown" (click)="conta()">Conferma</button>
+                <button class="margineLaterale margineTop margineDown" (click)="ricerca()">Annulla</button>
+                <button class="margineLaterale margineTop margineDown" (click)="logOut()">Rimuovi</button>
+            </div>
         </div>
-        <div id="leftcenter4" class="padTop">
-            <button (click)="conta()">Conta</button>
+        <div id="left2">
+            <button class="margineLaterale margineTop margineDown" (click)="aggiungi()">Aggiungi</button>
         </div>
-        <div id="rightcenter4" class="padTop">
-            <button (click)="ricerca()">Ricerca</button>
-        </div>
-        <div id="right4" class="padTop">
-            <button (click)="logOut()">Logout</button>
-        </div>
-        <div class="center">
-            <app-tabella></app-tabella>
-        </div>
+    
+    <div>
+        <app-tabella></app-tabella>
     </div>
+</div>
